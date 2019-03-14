@@ -6,7 +6,8 @@ The datasets given by the official are described about the photos and users.
 Data:  
    flickrtags.py ... Data Collection    
      
-  
+      
+      
 Project's Name: Prediction of Flickr Image Popularity  
 Course name: Data Mining and Social Network Analysis  
 Students' Name: Peng Jung LEE, Chih-Lin CHANG, Wei-Ming HOU 
