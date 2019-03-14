@@ -8,6 +8,6 @@ Data:
      
   
 Project's Name: Prediction of Flickr Image Popularity  
-Course name: Data Mining and Social Network Analysis
+Course name: Data Mining and Social Network Analysis  
 Students' Name: Peng Jung LEE, Chih-Lin CHANG, Wei-Ming HOU 
 Programming Language: Python
