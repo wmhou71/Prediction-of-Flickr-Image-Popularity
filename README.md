@@ -6,7 +6,7 @@ This competition was about predicting the popularity of images in Flickr. The de
 
 Data:  
    flickrtags.py ... Data Collection    
-     
+   NN.py ... Built NN model  
       
       
 Project's Name: Prediction of Flickr Image Popularity  
