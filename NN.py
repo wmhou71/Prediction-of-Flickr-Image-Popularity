@@ -52,23 +52,14 @@ features_cols=['p_titleLen', 'p_desLen',
 'p_commentCount','p_viewCount', 'p_tagCount',
 'p_groupCount', 'p_favoriteCount']
 
-"""
-aa=[5,2,9,43,9,9,2,9,421,6,10,3,8]
-aa=np.log10(aa)
-aa=min_max_scaler.fit_transform(aa)
-print aa
-"""
+
 X =np.array(data_f5[features_cols].values,float)
 y =np.array(data_f5['p_Score'].values,float)
 nor = X.max(axis=0)
 X = X/X.max(axis=0)
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=42)
-print len(X_train)
-print len(X_test)
-print len(y_train)
-print len(y_test)
-"""
+
 def baseline_model():
     # create model
     model = Sequential()
@@ -83,7 +74,7 @@ def baseline_model():
 
 
 
-#model.fit(X, y, nb_epoch=200, batch_size=20, validation_split=0.1, verbose=0, shuffle=True)
+model.fit(X, y, nb_epoch=200, batch_size=20, validation_split=0.1, verbose=0, shuffle=True)
 
 
 seed = 7
@@ -95,4 +86,3 @@ estimator = KerasRegressor(build_fn=baseline_model, nb_epoch=200, batch_size=20,
 kfold = KFold(n_splits=10, random_state=seed)
 results = cross_val_score(estimator, X, y, cv=kfold)
 print("Results: %.2f (%.2f) MSE" % (results.mean(), results.std()))
-"""
